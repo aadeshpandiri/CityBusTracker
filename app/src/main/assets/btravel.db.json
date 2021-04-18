@@ -1,0 +1,86 @@
+[
+  {
+    "ID": 1,
+    "BUS_NAME": "1-C",
+    "ROUTE_END": "Five Star Chowrangi",
+    "ROUTE_MAP": "{ 08:45=Business Recorder Road,09:00=Jama Cloth Market,09:15=Numaish,09:30=Mazar-e-Quaid,09:45=Guru Mandar,10:00=Hydri Market,10:15=Nagan Chowrangi,10:30=UP Mor,10:45=Power House,11:00=Surjani Town,11:15=Surjani Town,11:30=Power House,11:45=UP Mor,12:00=Nagan Chowrangi,12:15=Five Star Chowrangi}",
+    "ROUTE_START": "Business Recorder Road"
+  },
+  {
+    "ID": 2,
+    "BUS_NAME": "1-F",
+    "ROUTE_END": "UP Mor",
+    "ROUTE_MAP": "{ 12:30=Nazimabad Board Office,12:45=Golimar,13:00=Business Recorder Road,13:15=Jama Cloth Market,13:30=Numaish,13:45=Mazar-e-Quaid,14:00=Guru Mandar,14:15=Hydri Market,14:30=Nagan Chowrangi,14:45=UP Mor}",
+    "ROUTE_START": "Nazimabad Board"
+  },
+  {
+    "ID": 3,
+    "BUS_NAME": "1-G",
+    "ROUTE_END": "Hydri Market",
+    "ROUTE_MAP": "{15:00=Power House,15:15=Surjani Town,15:45=Power House,16:00=UP Mor,16:15=Nagan Chowrangi,16:30=Five Star Chowrangi,16:45=Nazimabad Board Office,17:00=Golimar,17:15=Business Recorder Road,17:30=Jama Cloth Market,17:45=Numaish,18:00=Mazar-e-Quaid,18:15=Guru Mandar,18:30=Hydri Market}",
+    "ROUTE_START": "Power House"
+  },
+  {
+    "ID": 4,
+    "BUS_NAME": "11-C",
+    "ROUTE_END": "Power House",
+    "ROUTE_MAP": "{15:30=Surjani Town,19:45=Nagan Chowrangi,20:00=UP Mor,20:15=Power House,20:30=Surjani Town,20:45=Power House,21:00=UP Mor,21:15=Nagan Chowrangi,21:30=Five Star Chowrangi,07:00=Nazimabad Board Office,07:15=Golimar,07:30=Business Recorder Road,07:45=Jama Cloth Market,08:00=Numaish,08:15=Mazar-e-Quaid,08:30=Guru Mandar,08:45=Hydri Market,09:00=Nagan Chowrangi,09:15=UP Mor,09:30=Power House}",
+    "ROUTE_START": "Surjani Town"
+  },
+  {
+    "ID": 5,
+    "BUS_NAME": "2-D",
+    "ROUTE_END": "Surjani Town",
+    "ROUTE_MAP": "{09:45=Surjani Town,10:00=Surjani Town,10:15=Power House,10:30=UP Mor,10:45=Nagan Chowrangi,11:00=Five Star Chowrangi,11:15=Nazimabad Board Office,11:30=Golimar,11:45=Business Recorder Road,12:00=Jama Cloth Market,12:15=Numaish,12:30=Mazar-e-Quaid,12:45=Guru Mandar,13:00=Hydri Market,13:15=Nagan Chowrangi,13:30=UP Mor,13:45=Power House,14:00=Surjani Town}",
+    "ROUTE_START": "Surjani Town"
+  },
+  {
+    "ID": 6,
+    "BUS_NAME": "2-D",
+    "ROUTE_END": "Power House",
+    "ROUTE_MAP": "{14:15=Surjani Town,14:30=Power House,14:45=UP Mor,15:00=Nagan Chowrangi,15:15=Five Star Chowrangi,15:30=Nazimabad Board Office,15:45=Golimar,16:00=Business Recorder Road,16:15=Jama Cloth Market,16:30=Numaish,16:45=Mazar-e-Quaid,17:00=Guru Mandar,17:15=Hydri Market,17:30=Nagan Chowrangi,17:45=UP Mor,18:00=Power House}",
+    "ROUTE_START": "Surjani Town"
+  },
+  {
+    "ID": 7,
+    "BUS_NAME": "2-K",
+    "ROUTE_END": "Power House",
+    "ROUTE_MAP": "{18:15=Golimar,18:30=Business Recorder Road,19:45=Jama Cloth Market,20:00=Numaish,20:15=Mazar-e-Quaid,20:30=Guru Mandar,20:45=Hydri Market,21:00=Nagan Chowrangi,21:15=UP Mor,21:30=Power House}",
+    "ROUTE_START": "Golimar"
+  },
+  {
+    "ID": 8,
+    "BUS_NAME": "4-C",
+    "ROUTE_END": "Mazar-e-Quaid",
+    "ROUTE_MAP": "{15:00=Power House,14:22=Surjani Town,14:11=Power House,13:44=UP Mor,13:22=Nagan Chowrangi,13:05=Five Star Chowrangi,12:44=Nazimabad Board Office,12:22=Golimar,12:14=Business Recorder Road,11:45=Jama Cloth Market,11:17=Numaish,10:55=Mazar-e-Quaid}",
+    "ROUTE_START": "Power House"
+  },
+  {
+    "ID": 9,
+    "BUS_NAME": "1-D",
+    "ROUTE_END": "UP Mor",
+    "ROUTE_MAP": "{10:35=Guru Mandar,10:10=Hydri Market,09:50=Nagan Chowrangi,08:25=UP Mor,08:00=Power House,07:45=Surjani Town,21:40=Surjani Town,21:22=Power House,21:00=UP Mor,20:40=Nagan Chowrangi,20:20=Five Star Chowrangi,20:00=Nazimabad Board Office,19:40=Golimar,19:20=Business Recorder Road,19:00=Jama Cloth Market,18:40=Numaish,18:20=Mazar-e-Quaid,18:00=Guru Mandar,17:40=Hydri Market,17:20=Nagan Chowrangi,17:00=UP Mor}",
+    "ROUTE_START": "Guru Mandar"
+  },
+  {
+    "ID": 10,
+    "BUS_NAME": "4-H",
+    "ROUTE_END": "UP Mor",
+    "ROUTE_MAP": "{16:40=Power House,16:20=Surjani Town,16:00=Surjani Town,15:40=Power House,15:20=UP Mor,15:00=Nagan Chowrangi}",
+    "ROUTE_START": "Power House"
+  },
+  {
+    "ID": 11,
+    "BUS_NAME": "1-H",
+    "ROUTE_END": "Nagan Chowrangi",
+    "ROUTE_MAP": "{13:40=Five Star Chowrangi,13:20=Nazimabad Board Office,13:00=Golimar,12:40=Business Recorder Road,12:20=Jama Cloth Market,12:10=Numaish,12:00=Mazar-e-Quaid,11:40=Guru Mandar,11:20=Hydri Market,11:00=Nagan Chowrangi,10:40=UP Mor,10:20=Power House,10:00=Golimar,09:40=Business Recorder Road,09:20=Jama Cloth Market,09:05=Numaish,08:50=Mazar-e-Quaid,08:35=Guru Mandar,08:20=Hydri Market,08:05=Nagan Chowrangi}",
+    "ROUTE_START": "Five Star Chowrangi"
+  },
+  {
+    "ID": 12,
+    "BUS_NAME": "1-H",
+    "ROUTE_END": "UP Mor",
+    "ROUTE_MAP": "{07:45=UP Mor,07:30=Power House}",
+    "ROUTE_START": "Power House"
+  }
+]

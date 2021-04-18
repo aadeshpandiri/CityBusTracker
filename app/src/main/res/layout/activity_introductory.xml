@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".introductoryActivity"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="487dp"
+        android:layout_height="950dp"
+        android:elevation="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gradient10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+
+    <!--<ImageView
+        android:id="@+id/logo"
+        android:elevation="2dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src=""
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--<TextView
+        android:id="@+id/app_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:fontFamily="@font/convergence"
+        android:gravity="center_horizontal"
+        android:text="BeTravel"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/lotte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img1" />-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/cloud1"
+        android:layout_width="match_parent"
+        android:layout_height="515dp"
+        android:elevation="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gradient14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".0"
+        app:lottie_autoPlay="true" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lotte"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintVertical_bias=".8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img1"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/splash7" />
+
+    <com.cuberto.liquid_swipe.LiquidPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+
+        android:id="@+id/app_name"
+        app:layout_constraintVertical_bias=".9"
+        app:layout_constraintHorizontal_bias=".45"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:fontFamily="@font/convergence"
+        android:gravity="center_horizontal"
+        android:text="City Bus"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
