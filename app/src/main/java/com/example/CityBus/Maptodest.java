@@ -75,7 +75,8 @@ public class Maptodest extends AppCompatActivity implements OnMapReadyCallback, 
     private NavigationMapRoute navigationMapRoute;
     // variables needed to initialize navigation
     private Button button;
-    double plo=0,plt=0,dlt=0,dlo=0.0;
+
+    double plo=0.0,plt=0.0,dlo=0.0,dlt=0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +91,7 @@ public class Maptodest extends AppCompatActivity implements OnMapReadyCallback, 
         plt = Double.parseDouble(plats);
         dlo = Double.parseDouble(dlongs);
         dlt = Double.parseDouble(dlats);
+
     }
 
     @Override
@@ -147,11 +149,7 @@ public class Maptodest extends AppCompatActivity implements OnMapReadyCallback, 
 //        Point destinationPoint = Point.fromLngLat(point.getLongitude(), point.getLatitude());
 //        Point originPoint = Point.fromLngLat(locationComponent.getLastKnownLocation().getLongitude(),
         //  locationComponent.getLastKnownLocation().getLatitude());
-
-//        Point destinationPoint = Point.fromLngLat(78.48,17.385);
-//        Point originPoint = Point.fromLngLat(78.33,18.32);
-
-        Point destinationPoint = Point.fromLngLat(dlo,dlo);
+        Point destinationPoint = Point.fromLngLat(dlo,dlt);
         Point originPoint = Point.fromLngLat(plo,plt);
 
 

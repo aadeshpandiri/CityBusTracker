@@ -4,7 +4,6 @@ package com.example.CityBus;
 
 
 
-import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import java.util.List;
@@ -34,6 +33,8 @@ import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 
+import static com.example.CityBus.CardClicked.dlats;
+import static com.example.CityBus.CardClicked.dlongs;
 import static com.example.CityBus.CardClicked.latitude;
 import static com.example.CityBus.CardClicked.longitude;
 import static com.example.CityBus.CardClicked.plats;
@@ -74,7 +75,8 @@ public class Maptopick extends AppCompatActivity implements OnMapReadyCallback, 
     private NavigationMapRoute navigationMapRoute;
     // variables needed to initialize navigation
     private Button button;
-    double plo=0,plt=0,clt=0,clo=0.0;
+
+    double plo=0.0,plt=0.0,clo=0.0,clt=0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,22 +86,11 @@ public class Maptopick extends AppCompatActivity implements OnMapReadyCallback, 
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
-        Intent mp = new Intent();
-        //System.out.println("details p:"+Double.parseDouble(mp.getStringExtra("plongs")));
-
-//         plo = Double.parseDouble(mp.getStringExtra("plongs"));
-//
-//         plt = Double.parseDouble(mp.getStringExtra("plats"));
-//         clo = Double.parseDouble(mp.getStringExtra("clongs"));
-//       clt = Double.parseDouble(mp.getStringExtra("clats"));
 
         plo = Double.parseDouble(plongs);
         plt = Double.parseDouble(plats);
         clo = Double.parseDouble(latitude);
         clt = Double.parseDouble(longitude);
-
-
-
 
     }
 
@@ -156,15 +147,10 @@ public class Maptopick extends AppCompatActivity implements OnMapReadyCallback, 
     public boolean onMapClick(@NonNull LatLng point) {
 
 //        Point destinationPoint = Point.fromLngLat(point.getLongitude(), point.getLatitude());
-//        Point originPoint = Point.fromLngLat(locationComponent.getLastKnownLocation().getLongitude(),
-        //  locationComponent.getLastKnownLocation().getLatitude());
-
-
-//        Point destinationPoint = Point.fromLngLat(78.48,17.385);
-//        Point originPoint = Point.fromLngLat(78.33,18.32);
-
+     Point originPoint = Point.fromLngLat(locationComponent.getLastKnownLocation().getLongitude(),
+         locationComponent.getLastKnownLocation().getLatitude());
         Point destinationPoint = Point.fromLngLat(plo,plt);
-        Point originPoint = Point.fromLngLat(clo,clt);
+       // Point originPoint = Point.fromLngLat(clo,clt);
 
 
         GeoJsonSource source = mapboxMap.getStyle().getSourceAs("destination-source-id");
