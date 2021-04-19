@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,10 +28,11 @@ public class BusDataAdapter extends RecyclerView.Adapter<BusDataAdapter.ViewHold
     ArrayList<String> SLL;
     ArrayList<String> PLL;
     ArrayList<String> DLL;
+    ArrayList<String> at;
 
 
 
-    public BusDataAdapter(Context context, ArrayList<String> busnumb, ArrayList<String> froms, ArrayList<String> tos,ArrayList<String> SLL,ArrayList<String> DLL,ArrayList<String> PLL) {
+    public BusDataAdapter(Context context, ArrayList<String> busnumb, ArrayList<String> froms, ArrayList<String> tos, ArrayList<String> SLL, ArrayList<String> DLL, ArrayList<String> PLL, ArrayList<String> at) {
         this.context = context;
         this.busnumb = busnumb;
         this.froms = froms;
@@ -38,6 +40,7 @@ public class BusDataAdapter extends RecyclerView.Adapter<BusDataAdapter.ViewHold
         this.SLL = SLL;
         this.PLL = PLL;
         this.DLL = DLL;
+        this.at = at;
 
     }
 
@@ -59,6 +62,7 @@ public class BusDataAdapter extends RecyclerView.Adapter<BusDataAdapter.ViewHold
         holder.busname.setText(busnumb.get(position));
         holder.startroute.setText(froms.get(position));
         holder.endroute.setText(tos.get(position));
+        holder.atime.setText(at.get(position));
 
         String sllpoints = SLL.get(position);
         String pllpoints = PLL.get(position);
@@ -109,14 +113,15 @@ public class BusDataAdapter extends RecyclerView.Adapter<BusDataAdapter.ViewHold
         TextView busname;
         TextView startroute;
         TextView endroute;
-        TextView timing;
+        TextView atime;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             busname = itemView.findViewById(R.id.tv_busname);
             startroute = itemView.findViewById(R.id.tv_currentLocation);
             endroute = itemView.findViewById(R.id.tv_destination);
-            timing = itemView.findViewById(R.id.tv_arrival);
+            //timing = itemView.findViewById(R.id.tv_arrival);
+            atime = itemView.findViewById(R.id.tv_arrival);
 
         }
     }

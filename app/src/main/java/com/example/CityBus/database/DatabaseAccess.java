@@ -39,7 +39,7 @@ public class DatabaseAccess {
 
     public Cursor getBusData(String sourcename, String destname){
         // %sourcename%destinationname%
-        c=db.rawQuery("select  Bus_Name, Route_Start,RSLL, Route_End,RELL,Pickup,PLL from BusesData where Route_Start ='"+sourcename+"' and Route_End ='"+destname+"'",new String[]{});
+        c=db.rawQuery("select  Bus_Name, Route_Start,RSLL, Route_End,RELL,Pickup,PLL,ArrivalTime from BusesData where Route_Start ='"+sourcename+"' and Route_End ='"+destname+"'",new String[]{});
 //        List<ArrayList<String>> data = new ArrayList<>();
 //        while(c.moveToNext()){
 //            String busnumber = c.getString(0);
