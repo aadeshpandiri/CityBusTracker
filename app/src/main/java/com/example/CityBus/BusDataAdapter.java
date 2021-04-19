@@ -24,15 +24,21 @@ public class BusDataAdapter extends RecyclerView.Adapter<BusDataAdapter.ViewHold
     ArrayList<String> busnumb;
     ArrayList<String> froms;
     ArrayList<String> tos;
-    ArrayList<String> routes;
+    ArrayList<String> SLL;
+    ArrayList<String> PLL;
+    ArrayList<String> DLL;
 
 
-    public BusDataAdapter(Context context, ArrayList<String> busnumb, ArrayList<String> froms, ArrayList<String> tos, ArrayList<String> routes) {
+
+    public BusDataAdapter(Context context, ArrayList<String> busnumb, ArrayList<String> froms, ArrayList<String> tos,ArrayList<String> SLL,ArrayList<String> DLL,ArrayList<String> PLL) {
         this.context = context;
         this.busnumb = busnumb;
         this.froms = froms;
         this.tos = tos;
-        this.routes = routes;
+        this.SLL = SLL;
+        this.PLL = PLL;
+        this.DLL = DLL;
+
     }
 
 
@@ -48,25 +54,47 @@ public class BusDataAdapter extends RecyclerView.Adapter<BusDataAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        String routeList = routes.get(position);
+
         String pickuppoint = froms.get(position);
         holder.busname.setText(busnumb.get(position));
         holder.startroute.setText(froms.get(position));
         holder.endroute.setText(tos.get(position));
-        StringBuilder time= new StringBuilder(routeList.substring(1,6));
-        if(time.indexOf("=")!=-1){
-            time.deleteCharAt(time.length()-1);
-        }
-        holder.timing.setText(time.toString());
+
+        String sllpoints = SLL.get(position);
+        String pllpoints = PLL.get(position);
+        String dllpoints = DLL.get(position);
+
+        String sdata[] = sllpoints.split(",");
+        String slong = sdata[0].trim();
+        String slat = sdata[1].trim();
+
+        String ddata[] = dllpoints.split(",");
+        String dlong = ddata[0].trim();
+        String dlat = ddata[1].trim();
+
+        String pdata[] = pllpoints.split(",");
+        String plong = pdata[0].trim();
+        String plat = pdata[1].trim();
+
+//        if(time.indexOf("=")!=-1){
+//            time.deleteCharAt(time.length()-1);
+//        }
+//        holder.timing.setText(time.toString());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println(time);
+//                System.out.println(time);
                 Intent intent = new Intent(context, CardClicked.class)
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("data",routeList);
-                intent.putExtra("pickup",pickuppoint);
+
+                intent.putExtra("slong",slong);
+                intent.putExtra("slat",slat);
+                intent.putExtra("plong",plong);
+                intent.putExtra("plat",plat);
+                intent.putExtra("dlong",dlong);
+                intent.putExtra("dlat",dlat);
+
                 context.startActivity(intent);
             }
         });

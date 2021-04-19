@@ -31,31 +31,30 @@ import com.google.android.gms.tasks.Task;
 
 import org.w3c.dom.Text;
 
+import static com.example.CityBus.ListActivity.to;
+
 public class CardClicked extends AppCompatActivity {
     TextView t1;
-    String pickups;
+   // String pickups;
+    public String source;
     private static final int REQUEST_LOCATION = 1;
     LocationManager locationManager;
-    String latitude, longitude;
+    static String latitude, longitude;
     FusedLocationProviderClient fusedLocationProviderClient;
+    static String  plongs="",plats="",dlats="",dlongs="",slongs="",slats="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_clicked);
         Intent in = getIntent();
-        String data = in.getStringExtra("data");
-        pickups = in.getStringExtra("pickup");
-        String display[] = data.split(",");
-        String text = "";
-        for (String s : display) {
-            text = text + s + "\n\n";
-        }
-        int num = text.length();
-        text = text.substring(1, num - 3);
-        t1 = (TextView) findViewById(R.id.datadisplay);
-        t1.setText(text);
-
+         slongs = in.getStringExtra("slong");
+         slats = in.getStringExtra("slat");
+         dlongs = in.getStringExtra("dlong");
+         dlats = in.getStringExtra("dlat");
+         plongs = in.getStringExtra("plong");
+         plats = in.getStringExtra("plat");
+         System.out.println("pt"+slongs);
     }
 
     public void gotomap(View view) {
@@ -75,7 +74,7 @@ public class CardClicked extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        String source = pickups;
+        source = "hyderabad";
         //String destination = etdestination.getText().toString().trim();
 
         if (source.equals("")) {
@@ -123,7 +122,16 @@ public class CardClicked extends AppCompatActivity {
 
                         System.out.println("details:" + latitude + "," + longitude);
 
-                        DisplayTrack(latitude, longitude, pickups);
+                        // DisplayTrack(latitude, longitude, source);
+                        Intent imtp = new Intent(getApplicationContext(),Maptopick.class);
+                        imtp.putExtra("clong",longitude);
+                        imtp.putExtra("clat",latitude);
+                        imtp.putExtra("plongs",plongs);
+                        imtp.putExtra("plats",plats);
+
+                        startActivity(imtp);
+
+
 
                     } else {
                         LocationRequest locationRequest = new LocationRequest()
@@ -138,7 +146,10 @@ public class CardClicked extends AppCompatActivity {
                                 Location location1 = locationResult.getLastLocation();
                                 latitude = String.valueOf(location1.getLatitude());
                                 longitude = String.valueOf(location1.getLongitude());
-                                DisplayTrack(latitude, longitude, pickups);
+                                //DisplayTrack(latitude, longitude, source);
+                                Intent imtp = new Intent(getApplicationContext(),Maptopick.class);
+                                startActivity(imtp);
+
                             }
                         };
 
@@ -154,23 +165,53 @@ public class CardClicked extends AppCompatActivity {
         return (latitude + "," + longitude);
     }
 
-    private void DisplayTrack(String latitude, String longitude, String destination) {
-        try {
-            //Uri uri = Uri.parse("https://www.google.co.in/maps/dir/"+source+"/"+destination);
-            System.out.println("details for track :" + latitude + "," + longitude);
-            Uri uri = Uri.parse("https://www.google.com/maps/dir/" + (latitude) + ",+" + (longitude) + "/" + destination);
-            Intent i = new Intent(Intent.ACTION_VIEW, uri);
-            i.setPackage("com.google.android.apps.maps");
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(i);
-        } catch (ActivityNotFoundException e) {
-            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
-            Intent in = new Intent(Intent.ACTION_VIEW, uri);
+//    private void DisplayTrack(String latitude, String longitude, String destination) {
+//        try {
+////            Intent im2 = new Intent(Intent.ACTION_VIEW,
+////                    Uri.parse("google.navigation:q=22.65,88.43&mode=l"));
+////            im2.setPackage("com.google.android.apps.maps");
+////            im2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+////            startActivity(im2);
+//            System.out.println("details of destination:"+to);
+//            Uri gmmIntentUri =Uri.parse("google.navigation:q="+to+"&mode=b");
+//            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+//            mapIntent.setPackage("com.google.android.apps.maps");
+//            startActivity(mapIntent);
+//
+//
+//        } catch (ActivityNotFoundException e) {
+//            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
+//            Intent in = new Intent(Intent.ACTION_VIEW, uri);
+//
+//            in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(in);
+//        }
+//
+//
+//    }
 
-            in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(in);
-        }
-
-
+    public void gotodestmap(View view) {
+        Intent imtd = new Intent(getApplicationContext(),Maptodest.class);
+        startActivity(imtd);
     }
+
+//    private void DisplayTrack(String latitude, String longitude, String destination) {
+//        try {
+//            //Uri uri = Uri.parse("https://www.google.co.in/maps/dir/"+source+"/"+destination);
+//            System.out.println("details for track :" + latitude + "," + longitude);
+//            Uri uri = Uri.parse("https://www.google.com/maps/dir/" + (latitude) + ",+" + (longitude) + "/" + destination);
+//            Intent i = new Intent(Intent.ACTION_VIEW, uri);
+//            i.setPackage("com.google.android.apps.maps");
+//            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(i);
+//        } catch (ActivityNotFoundException e) {
+//            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
+//            Intent in = new Intent(Intent.ACTION_VIEW, uri);
+//
+//            in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(in);
+//        }
+//
+//
+//    }
 }

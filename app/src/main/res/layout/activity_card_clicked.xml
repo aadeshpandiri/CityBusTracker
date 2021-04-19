@@ -46,22 +46,13 @@
             app:cardBackgroundColor="@color/cardview_light_background">
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textStyle="bold"
-                android:textColor="@color/teal_700"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-                android:layout_marginTop="20dp"
-                android:textSize="16sp"
-                android:id="@+id/datadisplay" />
+
 
 
         </androidx.cardview.widget.CardView>
 
             <Button
-                android:id="@+id/mapbtn"
+                android:id="@+id/mappick"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -75,6 +66,22 @@
                 android:layout_marginBottom="30dp"
                 android:textColor="@color/white"
                  />
+
+            <Button
+                android:id="@+id/mapdest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_bg"
+                android:text="Destination Point"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:onClick="gotodestmap"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/white"
+                />
         </LinearLayout>
 
 

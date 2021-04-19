@@ -17,4 +17,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="access_token" translatable="false">pk.eyJ1IjoiYWFkZXNocGFuZGlyaSIsImEiOiJja25uajEzNTAwemFiMndwZm92emhvNnVyIn0.cvshRhCvBZfCDeTkYxdmLw</string>
+    <string name="user_location_permission_explanation">This app needs location permissions to show its functionality.</string>
+    <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
 </resources>

@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ListActivity extends Activity {
+    public  static String to;
 
     private static final String [] routestrings = new String[]
             {"Nazimabad", "BaraMaidan", "Lasbela", "LawrenceRoad", "BarnessStreet", "BandarRoad", "Tower", "M.P.RColony",
@@ -419,6 +420,10 @@ public class ListActivity extends Activity {
     ArrayList<String> tos;
     ArrayList<String> routes;
     BusDataAdapter adapter;
+    ArrayList<String> SLL;
+    ArrayList<String> DLL;
+    ArrayList<String> PLL;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -438,6 +443,11 @@ public class ListActivity extends Activity {
         froms = new ArrayList<>();
         tos = new ArrayList<>();
         routes= new ArrayList<>();
+        SLL = new ArrayList<>();
+        DLL = new ArrayList<>();
+        PLL = new ArrayList<>();
+
+
 
     }
 
@@ -446,7 +456,8 @@ public class ListActivity extends Activity {
         databaseAccess.open();
 
         String from = e1.getText().toString().trim();
-        String to = e2.getText().toString().trim();
+         to = e2.getText().toString().trim();
+
         Cursor busdata = databaseAccess.getBusData(from,to);
         if(busdata.getCount()==0){
             Toast.makeText(this, "Not Found", Toast.LENGTH_LONG).show();
@@ -455,11 +466,19 @@ public class ListActivity extends Activity {
             while(busdata.moveToNext()){
                 busnumb.add(busdata.getString(0));
                 froms.add(busdata.getString(1));
-                tos.add(busdata.getString(2));
-                routes.add(busdata.getString(3));
+                tos.add(busdata.getString(3));
+
+                System.out.println("details bus :"+busdata.getString(2));
+                System.out.println("details bus4 :"+busdata.getString(4));
+                System.out.println("details bus6 :"+busdata.getString(6));
+
+                SLL.add(busdata.getString(2));
+                DLL.add(busdata.getString(4));
+
+                PLL.add(busdata.getString(6));
             }
         }
-        adapter = new BusDataAdapter(ListActivity.this,busnumb,froms,tos,routes);
+        adapter = new BusDataAdapter(ListActivity.this,busnumb,froms,tos,SLL,DLL,PLL);
         recyclerView.setAdapter(adapter);
         databaseAccess.close();
     }

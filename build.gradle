@@ -20,6 +20,8 @@ allprojects {
         def githubProperties = new Properties()
         githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
         repositories {
+            mavenCentral()
+            maven { url 'https://mapbox.bintray.com/mapbox' }
             maven {
                 name = "GitHubPackages"
 
