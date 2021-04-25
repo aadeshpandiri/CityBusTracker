@@ -24,9 +24,9 @@ import maes.tech.intentanim.CustomIntent;
 
 public class introductoryActivity extends AppCompatActivity {
 
-    TextView appName;
+    TextView appName,developer;
     ImageView splashImage;
-    LottieAnimationView lottieAnimationView;
+    LottieAnimationView lottieAnimationView,lottieAnimationView1;
 
     private static  final int NUM_PAGES =3;
     private ViewPager viewPager;
@@ -43,8 +43,11 @@ public class introductoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_introductory);
 
         appName = (TextView)findViewById(R.id.appname);
+        developer = findViewById(R.id.developer);
+
         //splashImage = (ImageView)findViewById(R.id.img);
         lottieAnimationView =  findViewById(R.id.lottie);
+        lottieAnimationView1 = findViewById(R.id.lottie1);
 
         viewPager = findViewById(R.id.pager);
         pageAdapter = new ScreenSlidePageAdapter(getSupportFragmentManager());
@@ -57,12 +60,16 @@ public class introductoryActivity extends AppCompatActivity {
         animation.setDuration(2700);
         animation.setFillAfter(true);
 
-        //lottieAnimationView.startAnimation(animation);
+        lottieAnimationView.startAnimation(animation);
+        lottieAnimationView1.startAnimation(animation);
 
 
 //        splashImage.animate().translationY(-2700).setDuration(1000).setStartDelay(4000);
         appName.animate().translationY(-1400).setDuration(2700).setStartDelay(0);
-        //lottieAnimationView.animate().translationX(2000).setDuration(2000).setStartDelay(2900);
+        lottieAnimationView.animate().translationY(2000).setDuration(2000).setStartDelay(2900);
+        lottieAnimationView1.animate().translationY(2000).setDuration(2000).setStartDelay(2900);
+        developer.animate().translationY(2000).setDuration(2000).setStartDelay(2900);
+       // appName.animate().translationY(-2000).setDuration(2000).setStartDelay(2900);
 
         new Handler().postDelayed(new Runnable() {
             @Override
