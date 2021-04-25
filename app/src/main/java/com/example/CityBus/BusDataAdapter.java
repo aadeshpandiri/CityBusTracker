@@ -20,7 +20,7 @@ import java.util.List;
 
 public class BusDataAdapter extends RecyclerView.Adapter<BusDataAdapter.ViewHolder> {
 
-    //    BusData[] busData;
+
     Context context;
     ArrayList<String> busnumb;
     ArrayList<String> froms;

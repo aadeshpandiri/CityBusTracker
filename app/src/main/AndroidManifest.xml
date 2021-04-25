@@ -37,8 +37,6 @@
             android:value="com.example.CityBus" />
 
         <activity android:name=".introductoryActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MapActivity" />
         <activity android:name=".ListActivity">
 
             <intent-filter>

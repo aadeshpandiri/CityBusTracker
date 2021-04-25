@@ -8,14 +8,40 @@
     android:background="@drawable/gradient10"
     >
 
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:layout_marginBottom="300dp"
+            android:id="@+id/rv_buses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="1"
+            tools:listitem="@layout/row_bus"
+            android:layout_marginTop="10dp"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="298dp"
+        android:layout_height="300dp"
         android:background="@drawable/vie_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:elevation="2dp"
+        android:elevation="12dp"
         android:paddingTop="10dp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent">
@@ -134,30 +160,5 @@
             app:layout_constraintWidth_percent=".8" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-
-            android:layout_marginBottom="298dp"
-            android:id="@+id/rv_buses"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:itemCount="1"
-            tools:listitem="@layout/row_bus"
-            android:layout_marginTop="10dp"
-            >
-
-        </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
