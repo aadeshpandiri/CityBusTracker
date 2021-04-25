@@ -24,7 +24,8 @@ public class ListActivity extends Activity {
 
     private static final String [] routestrings = new String[]
             {
-                    "Nizamabad","Hyderabad","Pune","Delhi","Mumbai","Chennai"
+                   "Mumbai","Chennai","Nizamabad","Hyderabad","Goa","Delhi","UttarPradesh"
+
             };
 
     AutoCompleteTextView e1,e2;

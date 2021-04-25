@@ -32,6 +32,7 @@
                 android:layout_below="@+id/tv_destination"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
                 android:layout_marginRight="10dp"
                 android:drawableLeft="@drawable/ic_bus_logo"
                 android:gravity="center_vertical"
@@ -46,7 +47,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="11dp"
                 android:layout_marginRight="10dp"
-                android:drawableLeft="@drawable/ic_my_location"
+                android:drawablePadding="15dp"
+                android:drawableLeft="@drawable/targetlocation"
                 android:gravity="center_vertical"
                 android:text="Gulshan e Jamal"
                 android:textSize="18dp" />
@@ -59,6 +61,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
+                android:drawablePadding="15dp"
                 android:drawableLeft="@drawable/ic_baseline_location_on_24"
                 android:gravity="center_vertical"
                 android:text="Saddar"
@@ -73,6 +76,7 @@
                 android:layout_alignEnd="@+id/dst1"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="9dp"
+                android:drawablePadding="10dp"
                 android:layout_marginBottom="15dp"
                 android:text="13:00"
                 android:textSize="18dp" />
