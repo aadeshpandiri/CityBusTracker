@@ -36,14 +36,16 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.example.CityBus" />
 
-        <activity android:name=".introductoryActivity" />
-        <activity android:name=".ListActivity">
-
+        <activity android:name=".introductoryActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ListActivity">
+
+
 
         </activity> <!-- <activity android:name=".MainActivity" /> -->
         <meta-data
@@ -52,6 +54,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBooCZB7B-7kgGhqp8KvwPzhultAP9UYaI" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
