@@ -160,6 +160,20 @@
             app:layout_constraintVertical_bias=".8"
             app:layout_constraintWidth_percent=".8" />
 
+        <Button
+            android:id="@+id/recent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:text="Recent"
+            android:onClick="recentroutes"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintVertical_bias=".8"
+            app:layout_constraintWidth_percent=".8"
+            tools:ignore="MissingConstraints" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

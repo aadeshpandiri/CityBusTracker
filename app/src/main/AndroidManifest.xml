@@ -16,12 +16,10 @@
         android:theme="@style/Theme.Betravel"
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
-        <activity android:name=".Maptodest"></activity>
+        <activity android:name=".ListActivity2"></activity>
+        <activity android:name=".Maptodest" />
         <activity android:name=".Maptopick" />
-        <activity android:name=".CardClicked" >
-
-        </activity>
-
+        <activity android:name=".CardClicked"></activity>
 
         <meta-data
             android:name="DATABASE"
@@ -38,13 +36,11 @@
 
         <activity android:name=".introductoryActivity" />
         <activity android:name=".ListActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity> <!-- <activity android:name=".MainActivity" /> -->
         <meta-data
             android:name="com.google.android.gms.version"

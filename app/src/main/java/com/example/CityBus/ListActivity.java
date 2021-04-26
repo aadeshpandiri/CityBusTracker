@@ -1,6 +1,7 @@
 package com.example.CityBus;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -105,5 +106,10 @@ public class ListActivity extends Activity {
         adapter = new BusDataAdapter(ListActivity.this,busnumb,froms,tos,SLL,DLL,PLL,at);
         recyclerView.setAdapter(adapter);
         databaseAccess.close();
+    }
+
+    public void recentroutes(View view) {
+        Intent re = new Intent(this,ListActivity2.class);
+        startActivity(re);
     }
 }
