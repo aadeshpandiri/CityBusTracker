@@ -111,7 +111,7 @@ public class BusDataAdapter extends RecyclerView.Adapter<BusDataAdapter.ViewHold
                     }
                 });
 
-                Toast.makeText(context, "hello", Toast.LENGTH_LONG).show();
+               // Toast.makeText(context, "hello", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(context, CardClicked.class)
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("slong",slong);

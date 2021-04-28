@@ -2,8 +2,11 @@ package com.example.CityBus;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -166,10 +169,57 @@ public class ListActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_history:
                 startActivity(new Intent(getApplicationContext(), ListActivity2.class));
                 break;
+            case R.id.nav_home:
+                startActivity(new Intent(getApplicationContext(), ListActivity.class));
+                break;
+            case R.id.nav_search:
+                startActivity(new Intent(getApplicationContext(), ListActivity2.class));
+                break;
+            case R.id.nav_login:
+                startActivity(new Intent(getApplicationContext(), Login.class));
+                break;
+            case R.id.nav_logout:
+                startActivity(new Intent(getApplicationContext(), Login.class));
+                break;
+            case R.id.nav_whatsappp:
+                String phoneNumberWithCountryCode = "+923060000606";
+                String message = "Hi Coding with Tea ! Help me with App Development.";
+
+                startActivity(
+                        new Intent(Intent.ACTION_VIEW,
+                                Uri.parse(
+                                        String.format("https://api.whatsapp.com/send?phone=%s&text=%s", phoneNumberWithCountryCode, message)
+                                )
+                        )
+                );
 
         }
 
         return true;
+    }
+
+    public void onClickWhatsApp(View view) {
+
+        PackageManager pm=getPackageManager();
+        try {
+
+            Intent waIntent = new Intent(Intent.ACTION_SEND);
+            waIntent.setType("text/plain");
+            String text = "Coding with tea please help with app development";
+
+            PackageInfo info=pm.getPackageInfo("com.whatsapp", PackageManager.GET_META_DATA);
+            //Check if package exists or not. If not then code
+            //in catch block will be called
+            waIntent.setPackage("com.whatsapp");
+
+            waIntent.putExtra(Intent.EXTRA_TEXT, text);
+            startActivity(Intent.createChooser(waIntent, "Share with"));
+
+        } catch (PackageManager.NameNotFoundException e) {
+            Toast.makeText(this, "WhatsApp not Installed", Toast.LENGTH_SHORT)
+                    .show();
+        }
+
     }
 
 
@@ -207,5 +257,11 @@ public class ListActivity extends AppCompatActivity implements NavigationView.On
         adapter = new BusDataAdapter(ListActivity.this,busnumb,froms,tos,SLL,DLL,PLL,at);
         recyclerView.setAdapter(adapter);
         databaseAccess.close();
+    }
+
+    public void gotorecent(View view) {
+        Intent i10 = new Intent(getApplicationContext(),ListActivity2.class);
+        startActivity(i10);
+        finish();
     }
 }

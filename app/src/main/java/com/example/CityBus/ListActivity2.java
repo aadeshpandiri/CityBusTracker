@@ -1,6 +1,7 @@
 package com.example.CityBus;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -80,5 +81,11 @@ public class ListActivity2 extends Activity {
 
             }
         });
+    }
+
+    public void getBack(View view) {
+        Intent i1 = new Intent(getApplicationContext(),ListActivity.class);
+        startActivity(i1);
+        finish();
     }
 }
