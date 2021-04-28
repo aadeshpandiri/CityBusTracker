@@ -16,12 +16,19 @@
         android:theme="@style/Theme.Betravel"
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
-        <activity android:name=".Maptodest"></activity>
-        <activity android:name=".Maptopick" />
-        <activity android:name=".CardClicked" >
+        <activity android:name=".ForgetPasswordSuccessMessage"></activity>
+        <activity android:name=".ForgetPassword" />
+        <activity android:name=".SetNewPassword" />
+        <activity android:name=".VerifyOTP" />
+        <activity android:name=".Login" />
+        <activity android:name=".SignUp2" />
+        <activity android:name=".SignUp">
 
         </activity>
-
+        <activity android:name=".demo1" />
+        <activity android:name=".Maptodest" />
+        <activity android:name=".Maptopick" />
+        <activity android:name=".CardClicked" />
 
         <meta-data
             android:name="DATABASE"
@@ -37,17 +44,14 @@
             android:value="com.example.CityBus" />
 
         <activity android:name=".introductoryActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListActivity">
-
-
-
-        </activity> <!-- <activity android:name=".MainActivity" /> -->
+        <activity android:name=".ListActivity" /> <!-- <activity android:name=".MainActivity" /> -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

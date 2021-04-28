@@ -11,13 +11,11 @@
             android:title="@string/search"
             android:icon="@drawable/menu_search_icon"/>
         <item
-            android:id="@+id/nav_all_categories"
-            android:title="@string/all_categories"
+            android:id="@+id/nav_history"
+            android:title="@string/history"
+
             android:icon="@drawable/menu_categories_icon"/>
-        <item
-            android:id="@+id/nav_add_missing_place"
-            android:title="@string/add_missing_place"
-            android:icon="@drawable/menu_add_missing_place_icon"/>
+
     </group>
 
 
@@ -42,26 +40,15 @@
         </menu>
     </item>
 
-    <item android:title="Categories">
+    <item android:title="Contact us">
         <menu>
 
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_restaurants"
-                    android:title="@string/restaurants"
+                    android:id="@+id/nav_whatsappp"
+                    android:title="@string/CODINGWITHTEA"
                     android:icon="@drawable/restaurant_icon"/>
-                <item
-                    android:id="@+id/nav_bank"
-                    android:title="@string/banks"
-                    android:icon="@drawable/bank_icon"/>
-                <item
-                    android:id="@+id/nav_education"
-                    android:title="@string/education"
-                    android:icon="@drawable/school_icon"/>
-                <item
-                    android:id="@+id/nav_shop"
-                    android:title="@string/shops"
-                    android:icon="@drawable/shop_icon"/>
+
             </group>
 
         </menu>

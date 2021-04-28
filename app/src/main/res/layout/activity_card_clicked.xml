@@ -57,7 +57,7 @@
                 android:textStyle="bold"
                 android:onClick="gotomap"
                 android:elevation="15dp"
-
+                app:backgroundTint="@null"
                 android:layout_marginBottom="30dp"
                 android:textColor="@color/white"
                  />
@@ -76,6 +76,7 @@
                 android:elevation="15dp"
                 android:onClick="gotodestmap"
                 android:layout_marginBottom="30dp"
+                app:backgroundTint="@null"
                 android:textColor="@color/white"
                 />
         </LinearLayout>

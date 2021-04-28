@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".demo1"
+    android:id="@+id/drawer_layout"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/lightWhite"
+        android:theme="@style/navigationTheme"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/menu_header"
+        app:menu="@menu/main_menu"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCEEDA"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FCEEDA"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/menu_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/menu_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:text="CITY BUS TRACKER"
+                        android:fontFamily="@font/brandon_grotesque_black"
+                        android:textSize="18sp"
+                        android:textColor="#2f2f2f"
+                        android:padding="5dp"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ScrollView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:scrollbars="none">-->
+
+
+
+<!--                        <androidx.recyclerview.widget.RecyclerView-->
+
+<!--                            android:layout_marginBottom="400dp"-->
+<!--                            android:id="@+id/rv_buses"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            tools:itemCount="3"-->
+<!--                            tools:listitem="@layout/row_bus"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            >-->
+
+<!--                        </androidx.recyclerview.widget.RecyclerView>-->
+
+
+<!--                    </ScrollView>-->
+
+
+
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="300dp"-->
+<!--                        android:layout_gravity="bottom"-->
+<!--                        android:gravity="bottom"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:background="@drawable/vie_bg"-->
+<!--                        android:elevation="12dp"-->
+<!--                        android:paddingTop="10dp"-->
+<!--                        android:layout_marginBottom="0dp"-->
+<!--                        android:layout_marginTop="10dp">-->
+
+
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/desttxt"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:elevation="2dp"-->
+<!--                            android:fontFamily="@font/convergence"-->
+<!--                            android:gravity="center_horizontal"-->
+<!--                            android:text="Where Would you like"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_marginLeft="30dp"-->
+<!--                            android:padding="10dp"-->
+<!--                            />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+
+<!--                            android:layout_marginLeft="70dp"-->
+
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/desttxt2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+
+<!--                                android:elevation="2dp"-->
+<!--                                android:fontFamily="@font/convergence"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:text="to go "-->
+<!--                                android:textAlignment="center"-->
+<!--                                android:textSize="18sp"-->
+<!--                                android:textStyle="bold"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/desttxt3"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginLeft="4dp"-->
+<!--                                android:elevation="12dp"-->
+<!--                                android:fontFamily="@font/convergence"-->
+<!--                                android:gravity="center_horizontal"-->
+<!--                                android:text="Today ?"-->
+<!--                                android:textAlignment="center"-->
+<!--                                android:textColor="#1976D2"-->
+<!--                                android:textSize="18sp"-->
+<!--                                android:textStyle="bold"-->
+
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintHorizontal_bias="0.193"-->
+<!--                                app:layout_constraintStart_toStartOf="@+id/desttxt"-->
+<!--                                app:layout_constraintTop_toBottomOf="@+id/desttxt" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <AutoCompleteTextView-->
+<!--                            android:id="@+id/source"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/edit_txt_bg"-->
+<!--                            android:drawableLeft="@drawable/ic_baseline_location_on_24"-->
+<!--                            android:hint="Choose Starting Point"-->
+<!--                            android:textColorHint="#000000"-->
+<!--                            android:paddingLeft="20dp"-->
+<!--                            android:paddingTop="10dp"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_marginTop="20dp"-->
+<!--                            android:layout_marginLeft="40dp"-->
+<!--                            android:layout_marginRight="40dp"-->
+
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            />-->
+
+<!--                        <AutoCompleteTextView-->
+<!--                            android:id="@+id/destination"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/edit_txt_bg"-->
+<!--                            android:drawableLeft="@drawable/targetlocation"-->
+<!--                            android:hint="Choose Destination"-->
+<!--                            android:textColorHint="#000000"-->
+<!--                            android:paddingLeft="20dp"-->
+<!--                            android:paddingTop="10dp"-->
+<!--                            android:paddingBottom="10dp"-->
+<!--                            android:layout_marginTop="20dp"-->
+<!--                            android:layout_marginLeft="40dp"-->
+<!--                            android:layout_marginRight="40dp"-->
+<!--                            android:textAlignment="center"-->
+
+<!--                            android:textColor="@color/black"-->
+<!--                            android:elevation="15dp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            />-->
+
+
+
+<!--                        <Button-->
+<!--                            android:id="@+id/search"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/button_bg"-->
+<!--                            android:text="Search"-->
+<!--                            android:onClick="getroutes"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="14dp"-->
+<!--                            android:layout_marginLeft="75dp"-->
+<!--                            android:layout_marginRight="75dp"-->
+<!--                            android:layout_marginTop="25dp"-->
+<!--                            android:layout_marginBottom="25dp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_gravity="center_horizontal" />-->
+
+
+
+
+
+<!--                    </LinearLayout>-->
+
+
+
+<!--                </LinearLayout>-->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

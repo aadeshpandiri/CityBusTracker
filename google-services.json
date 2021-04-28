@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1067758348360",
+    "firebase_url": "https://busrouteapp-e1c71-default-rtdb.firebaseio.com",
+    "project_id": "busrouteapp-e1c71",
+    "storage_bucket": "busrouteapp-e1c71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067758348360:android:dc86c92fc5c97b6d2e507d",
+        "android_client_info": {
+          "package_name": "com.example.CityBus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067758348360-bj58mi8msd210lhgql3mt5ft2hptth5p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.CityBus",
+            "certificate_hash": "8fd5c69cd6cc66ae8c9e14b2b74e26a5473d661a"
+          }
+        },
+        {
+          "client_id": "1067758348360-mm5pfb9sinpoivbhd1chcvotievhotho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkul4CXzLYh2hJgu_cSL0d8qpqexqWp_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067758348360-mm5pfb9sinpoivbhd1chcvotievhotho.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

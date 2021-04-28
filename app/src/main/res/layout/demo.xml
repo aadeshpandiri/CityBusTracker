@@ -14,61 +14,55 @@
         android:layout_height="match_parent"
         android:background="@color/lightWhite"
         android:theme="@style/navigationTheme"
-
-        android:defaultFocusHighlightEnabled="true"
         android:layout_gravity="start"
         app:headerLayout="@layout/menu_header"
         app:menu="@menu/main_menu"/>
-
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FCEEDA"
-        android:orientation="vertical"
-        >
-
+        android:scrollbars="none">
 
         <LinearLayout
-            android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:background="@drawable/gradient10"
+            android:orientation="vertical"
+            >
+
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:padding="10dp">
-
-                <ImageView
-                    android:id="@+id/menu_icon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/menu_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:text="CITY BUS TRACKER"
-                    android:fontFamily="@font/brandon_grotesque_black"
-                    android:textSize="18sp"
-                    android:textColor="#2f2f2f"
-                    android:padding="5dp"
-                    android:layout_marginLeft="35dp"
-                    android:layout_centerInParent="true"
-                    android:textStyle="bold"/>
-
-            </LinearLayout>
-
-            <ScrollView
+                android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FCEEDA"
-                android:scrollbars="none">
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/menu_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/menu_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:text="CITY BUS TRACKER"
+                        android:fontFamily="@font/brandon_grotesque_black"
+                        android:textSize="18sp"
+                        android:textColor="#2f2f2f"
+                        android:padding="5dp"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
 
 
 
@@ -93,7 +87,6 @@
                             tools:itemCount="3"
                             tools:listitem="@layout/row_bus"
                             android:layout_marginTop="10dp"
-
                             >
 
                         </androidx.recyclerview.widget.RecyclerView>
@@ -113,8 +106,8 @@
                         android:background="@drawable/vie_bg"
                         android:elevation="12dp"
                         android:paddingTop="10dp"
-
-                        android:layout_marginTop="200dp">
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginTop="10dp">
 
 
 
@@ -223,7 +216,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/button_bg"
-                            app:backgroundTint="@null"
                             android:text="Search"
                             android:onClick="getroutes"
                             android:textColor="@color/white"
@@ -245,9 +237,9 @@
 
                 </LinearLayout>
 
-            </ScrollView>
+
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
-
+    </ScrollView>
 </androidx.drawerlayout.widget.DrawerLayout>
