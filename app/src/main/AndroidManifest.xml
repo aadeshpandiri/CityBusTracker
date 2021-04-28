@@ -16,15 +16,14 @@
         android:theme="@style/Theme.Betravel"
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
-        <activity android:name=".ForgetPasswordSuccessMessage"></activity>
+        <activity android:name=".ListActivity2"></activity>
+        <activity android:name=".ForgetPasswordSuccessMessage" />
         <activity android:name=".ForgetPassword" />
         <activity android:name=".SetNewPassword" />
         <activity android:name=".VerifyOTP" />
         <activity android:name=".Login" />
         <activity android:name=".SignUp2" />
-        <activity android:name=".SignUp">
-
-        </activity>
+        <activity android:name=".SignUp"></activity>
         <activity android:name=".demo1" />
         <activity android:name=".Maptodest" />
         <activity android:name=".Maptopick" />
@@ -43,8 +42,7 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.example.CityBus" />
 
-        <activity android:name=".introductoryActivity" >
-
+        <activity android:name=".introductoryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

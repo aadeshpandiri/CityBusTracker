@@ -38,6 +38,7 @@ public class SignUp2 extends AppCompatActivity {
     RelativeLayout progressbar;
     String code;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +97,9 @@ public class SignUp2 extends AppCompatActivity {
 
         String phoneNum = "+"+ code + _getUserEnteredPhoneNumber;
         //remove 0 at the start if entered by the user
-        final String _phoneNo = "+" + countryCodePicker.getFullNumber() + _getUserEnteredPhoneNumber;
+        final  String _phoneNo = "+" + countryCodePicker.getFullNumber() + _getUserEnteredPhoneNumber;
+
+
         //final String _phoneNo = phoneNum;
 
 
@@ -106,6 +109,7 @@ public class SignUp2 extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 //If Phone Number exists then get password
+
 
                 if (dataSnapshot.exists()) {
                     phoneNumber.setError("Phone Number Already Registered!");
@@ -125,6 +129,7 @@ public class SignUp2 extends AppCompatActivity {
                     intent.putExtra("password", _password);
 
                     intent.putExtra("phoneNo", _phoneNo);
+
                     intent.putExtra("whatToDO", "createNewUser");
 
                     //Add Transition

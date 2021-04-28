@@ -34,6 +34,7 @@ public class Login extends AppCompatActivity {
     RelativeLayout progressbar;
     CheckBox rememberMe;
     TextInputEditText phoneNumberEditText, passwordEditText;
+    public static String phnpass="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +130,7 @@ public class Login extends AppCompatActivity {
 
                         startActivity(new Intent(getApplicationContext(), ListActivity.class));
                         finish();
+                        phnpass=_completePhoneNumber;
                         progressbar.setVisibility(View.GONE);
 
                     } else {

@@ -164,8 +164,9 @@ public class ListActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()) {
             case R.id.nav_history:
-                startActivity(new Intent(getApplicationContext(), CardClicked.class));
+                startActivity(new Intent(getApplicationContext(), ListActivity2.class));
                 break;
+
         }
 
         return true;

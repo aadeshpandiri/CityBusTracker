@@ -85,7 +85,7 @@ public class introductoryActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Intent i = new Intent(getApplicationContext(),ListActivity.class);
+                    Intent i = new Intent(getApplicationContext(),Login.class);
                     startActivity(i);
                     //CustomIntent.customType(getApplicationContext(),"right-to-left");
                     overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
